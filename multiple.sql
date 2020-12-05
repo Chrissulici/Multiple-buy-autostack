@@ -1,0 +1,1 @@
+ALTER TABLE `shop_item` ADD COLUMN `multiple_buy` int(1) NOT NULL DEFAULT '0' AFTER `count`;
