@@ -56,8 +56,10 @@
 			
 			if (bCount > 0)
 				item->AddToCharacter(ch, TItemPos(INVENTORY, iEmptyPos));
-			else
+			else{
 				M2_DESTROY_ITEM(item);
+				return false;
+			}
 		}
 
 		ITEM_MANAGER::instance().FlushDelayedSave(item);
